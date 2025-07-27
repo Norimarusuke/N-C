@@ -22,6 +22,14 @@ def hikageno_basho():
 def top():
     return render_template("top.html")
 
+@app.route("/call")
+def call():
+    return render_template("call.html")
+
+@app.route("/call2")
+def call2():
+    return render_template("call2.html")
+
 app.run(debug=True, host="0.0.0.0")
 
 
