@@ -30,6 +30,10 @@ def call():
 def call2():
     return render_template("call2.html")
 
+@app.route("/jidou_hanbai")
+def jidou_hanbai():
+    return render_template("jidou_hanbai.html")
+
 app.run(debug=True, host="0.0.0.0")
 
 
