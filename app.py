@@ -34,6 +34,10 @@ def call2():
 def jidou_hanbai():
     return render_template("jidou_hanbai.html")
 
+@app.route("/map")
+def map():
+    return render_template("map.html")
+
 app.run(debug=True, host="0.0.0.0")
 
 
