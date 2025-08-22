@@ -30,13 +30,26 @@ def call():
 def call2():
     return render_template("call2.html")
 
-@app.route("/jidou_hanbai")
-def jidou_hanbai():
-    return render_template("jidou_hanbai.html")
-
 @app.route("/map")
 def map():
     return render_template("map.html")
+
+@app.route("/house")
+def house():
+    return render_template("house.html")
+
+@app.route("/drink")
+def drink():
+    return render_template("drink.html")
+
+@app.route("/house2")
+def house2():
+    return render_template("house2.html")
+
+@app.route("/house3")
+def house3():
+    return render_template("house3.html")
+
 
 app.run(debug=True, host="0.0.0.0")
 
