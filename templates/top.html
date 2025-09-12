@@ -9,6 +9,55 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+        .balloon5 {
+            width: 100%;
+            margin: 1.5em 0;
+            overflow: hidden;
+        }
+
+        .balloon5 .faceicon {
+        float: left;
+        margin-right: -90px;
+        width: 80px;
+        }
+
+        .balloon5 .faceicon img{
+        width: 100%;
+        height: auto;
+        border: solid 3px #d7ebfe;
+        border-radius: 50%;
+        }
+
+        .balloon5 .chatting {
+        width: 100%;
+        }
+
+        .says {
+        display: inline-block;
+        position: relative; 
+        margin: 5px 0 0 105px;
+        padding: 17px 13px;
+        border-radius: 12px;
+        background: #d7ebfe;
+        }
+
+        .says:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 18px; 
+        left: -24px;
+        border: 12px solid transparent;
+        border-right: 12px solid #d7ebfe;
+        }
+
+        .says p {
+        margin: 0;
+        padding: 0;
+        }
+    </style>
             
 </head>
 <body>
@@ -22,22 +71,19 @@
         <a href="house" class="btn-floating btn-large waves-effect  a class="btn-floating btn-large waves-effect waves-waves-blue><i class="material-icons">家で</i></a>
         <a href="jidou_hanbai"btn-floating btn-large waves-effect  a class="btn-floating btn-large waves-effect waves-waves-blue><i class="material-icons">飲料</i></a>
 
-       <img src="/static/熱中症キャット.png" alt="" width="30%" height="20%" style="position: static;"></div
-      if click the button   >
-
-
-
-
-
-     
-
-
-
-
+        <h3 class="blue-text" style="text-decoration: underline">N-Y-C-APP</h3>
+        <img src="/static/熱中症キャット.png" alt="" width="50%" height="50%" style="position: static;"></div>
+        <div class="chatting">
+            <div class="says">
+            <p>このアプリは、熱中症予防のためのアプリです。</p>
+            <p>トップにあるボタンを押すと、そこに書いてある機能が発動します。</p>
+            </div>
+        </div>
     </div>
 
 <div class="section center">
-</div></ruby>
+</div>
+
 
 </body>
 </html>     
