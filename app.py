@@ -50,6 +50,17 @@ def house2():
 def house3():
     return render_template("house3.html")
 
+@app.route("/house4")
+def house4():
+    return render_template("house4.html")
+
+
+
+@app.route("/おためし")
+def おためし():
+    namae = "ゆうまる"
+    namae2 = "れいまる"
+    return render_template("おためし.html" ,abc=namae ,aaa=namae2) 
 
 app.run(debug=True, host="0.0.0.0")
 
