@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template("hello.html")
+    return redirect("/top")
 
 @app.route("/jidou_hanbai")
 def jidou_hanbai():
@@ -53,6 +53,10 @@ def house3():
 @app.route("/house4")
 def house4():
     return render_template("house4.html")
+
+@app.route("/call3")
+def call3():
+    return render_template("call3.html")
 
 
 
