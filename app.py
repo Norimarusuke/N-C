@@ -10,9 +10,9 @@ def hello():
 def jidou_hanbai():
     return render_template("jidou_hanbai.html")
 
-@app.route("/convenience")
-def convenience():
-    return render_template("convenience.html")
+@app.route("/shop")
+def shop():
+    return render_template("shop.html")
 
 @app.route("/hikageno_basho")
 def hikageno_basho():
@@ -57,6 +57,10 @@ def house4():
 @app.route("/call3")
 def call3():
     return render_template("call3.html")
+
+@app.route("/kion")
+def kion():
+    return render_template("kion.html")
 
 
 

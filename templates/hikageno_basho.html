@@ -19,6 +19,53 @@
     <style>
         #map { height: 500px; 
         width: 500px;}
+
+        .balloon5 {
+            width: 100%;
+            margin: 1.5em 0;
+            overflow: hidden;
+        }
+
+        .balloon5 .faceicon {
+        float: left;
+        margin-right: -90px;
+        width: 80px;
+        }
+
+        .balloon5 .faceicon img{
+        width: 100%;
+        height: auto;
+        border: solid 3px #d7ebfe;
+        border-radius: 50%;
+        }
+
+        .balloon5 .chatting {
+        width: 100%;
+        }
+
+        .says {
+        display: inline-block;
+        position: relative; 
+        margin: 5px 0 0 105px;
+        padding: 17px 13px;
+        border-radius: 12px;
+        background: #d7ebfe;
+        }
+
+        .says:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 18px; 
+        left: -24px;
+        border: 12px solid transparent;
+        border-right: 12px solid #d7ebfe;
+        }
+
+        .says p {
+        margin: 0;
+        padding: 0;
+        }
         
     </style>     
 </head>
@@ -26,7 +73,13 @@
     <div class="section center">
         <img src="/static/熱中症キャット.png" alt="" width="30%" height="30%" style="position: static;"></div
       if click the button   >
-   
+   <div class="chatting">
+            <div class="says">
+            <p>以下のマップの青いポツポツは、涼めるところのマップです。</p>
+            <p>いまは、盛岡市のマップしかできていません</p>
+
+            </div>
+        </div>
 <div id="map"></div>
     <script>
         var map = L.map('map').setView([39.701788471651774, 141.13579780305216], 15);
