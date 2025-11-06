@@ -70,8 +70,8 @@ def kion():
     print(data["data"][0]["rh"])
     rh = data["data"][0]["rh"]
     kiken = "危険"
-    gazou = "/static/呪いちゃん.png"
-    if kion < 5:
+
+    if kion < 10:
         kiken = "激さむゥ"
         gazou = "/static/呪いちゃん.png"
     if kion < 28:

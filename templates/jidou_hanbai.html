@@ -4,8 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materia1.0.0/js/materialize.min.js"></script>
+
+    <style>
+        #map { height: 500px; 
+        width: 500px;}
+        
+                .balloon5 {
+            width: 100%;
+            margin: 1.5em 0;
+            overflow: hidden;
+        }
+
+        .balloon5 .faceicon {
+        float: left;
+        margin-right: -90px;
+        width: 80px;
+        }
+
+        .balloon5 .faceicon img{
+        width: 100%;
+        height: auto;
+        border: solid 3px #d7ebfe;
+        border-radius: 50%;
+        }
+
+        .balloon5 .chatting {
+        width: 100%;
+        }
+
+        .says {
+        display: inline-block;
+        position: relative; 
+        margin: 5px 0 0 105px;
+        padding: 17px 13px;
+        border-radius: 12px;
+        background: #d7ebfe;
+        }
+
+        .says:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 18px; 
+        left: -24px;
+        border: 12px solid transparent;
+        border-right: 12px solid #d7ebfe;
+        }
+
+        .says p {
+        margin: 0;
+        padding: 0;
+        }
+
+        .icon-red { /* icon-redは最初に指定したクラス名 */
+        filter: hue-rotate(150deg);
+        }
+        /*
+        50deg：紫
+        120deg：ピンク
+        150deg：赤
+        180deg：茶
+        250deg：緑
+        */
+        
+
+    </style>
+
 </head>
 <body>
-   
+
+    <div class="section center">
+        <img src="/static/熱中症キャット.png" alt="" width="30%" height="30%" style="position: static;"></div
+      if click the button   >
+   <div class="chatting">
+            <div class="says">
+            <p>以下のマップの青いポツポツは、自動販売機ところのマップです。</p>
+            <p>いまは、盛岡市のマップしかできていません</p>
+            </div>
+        </div>
+
+<div id="map"></div>
+ <div class="row">
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" class="validate" placeholder="ニックネーム">
+        </div>
+
+         <div class="section center"><a class="btn-floating btn-large waves-effect waves- red"><i class="material-icons">登録</i></a></div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" class="validate" placeholder="自販機の場所(番号などは書かなくていいよ)">
+        </div>
+      </div>
+      </div></div></div>
+ 
+      
+    </div>
+
+
+
+    <script>
+        var map = L.map('map').setView([39.701788471651774, 141.13579780305216], 15);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+   </script>
+    
 </body>
 </html>
