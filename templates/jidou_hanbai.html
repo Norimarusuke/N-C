@@ -68,8 +68,10 @@
         padding: 0;
         }
 
-        .icon-red { /* icon-redは最初に指定したクラス名 */
-        filter: hue-rotate(150deg);
+       
+        
+         .icon-pink { /* icon-redは最初に指定したクラス名 */
+        filter: hue-rotate(120deg);
         }
         /*
         50deg：紫
@@ -130,7 +132,18 @@
             var longitude = position.coords.longitude;
             var map = L.map('map').setView([latitude, longitude], 15);
 
-           const redIcon = L.icon({
+           const pinkIcon = L.icon({
+                iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
+                iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
+                shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                tooltipAnchor: [16, -28],
+                shadowSize: [41, 41],
+                className: "icon-pink", // <= ここでクラス名を指定
+            });
+            const redIcon = L.icon({
                 iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
                 iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
                 shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
@@ -141,7 +154,7 @@
                 shadowSize: [41, 41],
                 className: "icon-red", // <= ここでクラス名を指定
             });
-            var marker = L.marker([latitude,longitude], { icon: redIcon }).addTo(map);
+            var marker = L.marker([latitude,longitude], { icon: pinkIcon }).addTo(map);
       
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
