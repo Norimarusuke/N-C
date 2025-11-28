@@ -1,5 +1,8 @@
 from flask import Flask, render_template,redirect
 
+from flask import request
+from database import Person
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -9,6 +12,7 @@ def hello():
 @app.route("/jidou_hanbai")
 def jidou_hanbai():
     return render_template("jidou_hanbai.html")
+
 
 @app.route("/shop")
 def shop():
@@ -87,11 +91,14 @@ def kion():
 
 
 
-@app.route("/おためし")
+@app.route("/おためし", methods=["POST"])
 def おためし():
-    namae = "ゆうまる"
-    namae2 = "れいまる"
-    return render_template("おためし.html" ,abc=namae ,aaa=namae2) 
+    namae =  request.form["ニックネーム"]
+    namae2 = request.form["自動販売機の場所"]
+    print (namae)
+    Person.create(name=namae , age=namae2 , gender="")
+    return redirect ("/jidou_hanbai") 
+    
 
 app.run(debug=True, host="0.0.0.0")
 
