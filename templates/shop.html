@@ -68,8 +68,9 @@
         }
 
         .icon-red { /* icon-redは最初に指定したクラス名 */
-        filter: hue-rotate(150deg);
+        filter: hue-rotate(120deg);
         }
+        
         /*
         50deg：紫
         120deg：ピンク
@@ -93,12 +94,36 @@
         </div>
 <div id="map"></div>
     <script>
+
+        
         var map = L.map('map').setView([39.701788471651774, 141.13579780305216], 15);       
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     const redIcon = L.icon({
+                iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
+                iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
+                shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                tooltipAnchor: [16, -28],
+                shadowSize: [41, 41],
+                className: "icon-red", // <= ここでクラス名を指定
+            });
+            const blueIcon = L.icon({
+                iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
+                iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
+                shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                tooltipAnchor: [16, -28],
+                shadowSize: [41, 41],
+                className: "icon-blue", // <= ここでクラス名を指定
+            });
+    const pinkIcon = L.icon({
         iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
         iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
         shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
@@ -107,39 +132,43 @@
         popupAnchor: [1, -34],
         tooltipAnchor: [16, -28],
         shadowSize: [41, 41],
-        className: "icon-red", // <= ここでクラス名を指定
+        className: "icon-pink", // <= ここでクラス名を指定
     });
-    var marker = L.marker([39.68807354013413, 141.16513012677294], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.700224602512215, 141.15919232672067], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70284869949633, 141.13661829144675], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70350532169589, 141.14862807888312], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.69889201851293, 141.14847566935936], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.709121802156766, 141.1427762460294], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.704178919842576, 141.1450140709556], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.73152608564626, 141.12051411253307], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.7086689968338, 141.15072646798885], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.712647451625486, 141.1657259152619], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70184441909226, 141.149213876636], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70230665206176, 141.14668481193846], { icon: redIcon }).addTo(map);
+     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var marker = L.marker([39.68807354013413, 141.16513012677294], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.700224602512215, 141.15919232672067], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70284869949633, 141.13661829144675], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70350532169589, 141.14862807888312], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.69889201851293, 141.14847566935936], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.709121802156766, 141.1427762460294], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.704178919842576, 141.1450140709556], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.73152608564626, 141.12051411253307], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.7086689968338, 141.15072646798885], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.712647451625486, 141.1657259152619], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70184441909226, 141.149213876636], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70230665206176, 141.14668481193846], { icon: blueIcon }).addTo(map);
     var marker = L.marker([39.702125053139135, 141.14703886353774], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.701882771522754, 141.1482310653922], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.704874651730165, 141.1437441879776], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70222649812463, 141.14829874364958], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.677355251119344, 141.13545770349927], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70357135640219, 141.14860662121043], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.669767981714664, 141.1350586304809], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.74332201862154, 141.12530470586717], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70268047842948, 141.1446432923743], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.68399156512763, 141.12933859979097], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.697890202258804, 141.0239195188458], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.687780539980075, 141.15017648630013], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.739406320393364, 141.1098656017292], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.71159988122472, 141.09942776302816], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.640310433539355, 141.16770830131904], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.665211214927176, 141.17588012436616], { icon: redIcon }).addTo(map);
-    var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: redIcon }).addTo(map);
+    var marker = L.marker([39.701882771522754, 141.1482310653922], { icon:blueIcon }).addTo(map);
+    var marker = L.marker([39.704874651730165, 141.1437441879776], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70222649812463, 141.14829874364958], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.677355251119344, 141.13545770349927], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70357135640219, 141.14860662121043], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.669767981714664, 141.1350586304809], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.74332201862154, 141.12530470586717], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70268047842948, 141.1446432923743], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.68399156512763, 141.12933859979097], { icon0: blueIcon }).addTo(map);
+    var marker = L.marker([39.697890202258804, 141.0239195188458], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.687780539980075, 141.15017648630013], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.739406320393364, 141.1098656017292], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.71159988122472, 141.09942776302816], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.640310433539355, 141.16770830131904], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.665211214927176, 141.17588012436616], { icon: blueIcon }).addTo(map);
+    var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: blueIcon }).addTo(map);
    </script>   
     </div>
 </body>

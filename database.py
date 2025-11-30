@@ -1,5 +1,6 @@
 from peewee import *
 
+
 db = SqliteDatabase('s-c-b.db')
 
 class Person(Model):

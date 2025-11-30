@@ -91,9 +91,10 @@
 
             </div>
         </div>
-<div id="map"></div>
-    <script>
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        <div id="map"></div>
+        <script>
+    
+         navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
         // 取得に成功した場合の処理
         function successCallback(position){
             // 緯度を取得し画面に表示
@@ -103,7 +104,6 @@
             var map = L.map('map').setView([latitude, longitude], 15);
 
             const pinkIcon = L.icon({
-                iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
                 iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
                 shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
                 iconSize: [25, 41],
@@ -169,5 +169,3 @@
     </div>
 </body>
 </html>     
-
-
