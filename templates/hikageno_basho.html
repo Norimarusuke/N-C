@@ -120,46 +120,57 @@
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
-            var marker = L.marker([39.68807354013413, 141.16513012677294]).addTo(map);
-            var marker = L.marker([39.65463431630138, 141.1581246677545]).addTo(map);
+            
             var marker = L.marker([39.8471710886572, 141.1663301812551]).addTo(map);
+             marker.bindPopup("西部公民館");
             var marker = L.marker([39.71869527989472, 141.1160706119394]).addTo(map);
-            var marker = L.marker([39.71414067902864, 141.1637486763797]).addTo(map);
-            var marker = L.marker([39.75622577266979, 141.16451426168604]).addTo(map);
+             marker.bindPopup("ローソン盛岡南青山町店");
             var marker = L.marker([39.87720987391162, 141.16684416220247]).addTo(map);
+             marker.bindPopup("盛岡市好摩野児童館");
             var marker = L.marker([39.84936272466777, 141.17001370772698]).addTo(map);
-            var marker = L.marker([39.724791375565, 141.141065558502]).addTo(map);
+             marker.bindPopup("渋民図書館");    
             var marker = L.marker([39.65360606227637, 141.15495624262684]).addTo(map);
+            marker.bindPopup("キャラホール・都南文化会館、都南公民館");    
             var marker = L.marker([39.70025473063942, 141.15480293495645]).addTo(map);
-            var marker = L.marker([39.70026684011272, 141.15471582728378]).addTo(map);
+            marker.bindPopup("プラザおでって･盛岡市観光文化交流センター 産直夢街道");
             var marker = L.marker([39.764947628646624, 141.1824243347048]).addTo(map);
+            marker.bindPopup("盛岡市余熱利用健康増進センター ゆぴあす");     
             var marker = L.marker([39.701209828011656, 141.15268855612013]).addTo(map); 
-            var marker = L.marker([39.6914908745836, 141.15842270121655]).addTo(map);
+            marker.bindPopup("もりおか歴史文化館・盛岡市城跡公園");
             var marker = L.marker([39.65046914613173, 141.13849626487936]).addTo(map);
-            var marker = L.marker([39.68623764643113, 141.15039885797387]).addTo(map);
+            marker.bindPopup("きたぎんボールパーク");
             var marker = L.marker([39.683051893917415, 141.1052304402636]).addTo(map);
+            marker.bindPopup("志波城古代公園");    
             var marker = L.marker([39.84614991864999, 141.171507790527]).addTo(map);
-            var marker = L.marker([39.84565222225912, 141.17365716143735]).addTo(map);
+            marker.bindPopup("旧齊藤家(盛岡市指定有形文化財）");    
             var marker = L.marker([39.68477105357971, 141.13830228528326]).addTo(map);
-            var marker = L.marker([39.68741310952601, 141.1475719998837]).addTo(map);
+            marker.bindPopup("岩手トヨペット㈱ 本宮支店");    
             var marker = L.marker([39.757740472385436, 141.16072088125046]).addTo(map);
+            marker.bindPopup("盛岡西松園店");    
             var marker = L.marker([39.68828806472594, 141.12640982120982]).addTo(map);
+            marker.bindPopup("ウエルシア盛岡本宮店");    
             var marker = L.marker([39.717149164268804, 141.12353372728458]).addTo(map);
-            var marker = L.marker([39.65428270705948, 141.15475719288187]).addTo(map);
-            var marker = L.marker([39.6596210039458, 141.1611430770266]).addTo(map);
+            marker.bindPopup("ウエルシア盛岡前九年店");    
             var marker = L.marker([39.73918372241681, 141.11064125375754]).addTo(map);
-            var marker = L.marker([39.68166833760899, 141.16401742120942]).addTo(map);
-            var marker = L.marker([39.676258311207135, 141.14408384143138]).addTo(map);
+            marker.bindPopup("ジョイス盛岡月が丘店");
             var marker = L.marker([39.73091715059968, 141.10704193284846]).addTo(map);
+             marker.bindPopup("(株)博扇堂クリーニングセンター ビックハウス青山店、セリア青山店、スーパーアークス青山店他");
             var marker = L.marker([39.690945553484575, 141.11965792491878]).addTo(map);
+             marker.bindPopup("タカヤアリーナ");
             var marker = L.marker([39.67125207752983, 141.15555733099106]).addTo(map);
+            marker.bindPopup("西部公民館");
             var marker = L.marker([39.7008348103138, 141.14916630215632]).addTo(map);
+            marker.bindPopup("西部公民館");
             var marker = L.marker([39.702450824597165, 141.1376128616833]).addTo(map);
+            marker.bindPopup("西部公民館");
             var marker = L.marker([39.70332426962587, 141.13798119793736]).addTo(map);
-            var marker = L.marker([39.660522977930874, 141.16358757466213]).addTo(map);
+            marker.bindPopup("西部公民館"); 
             var marker = L.marker([39.711194125646784, 141.10389582398975]).addTo(map);
+            marker.bindPopup("西部公民館");
             var marker = L.marker([39.7329667490553, 141.1161318156488]).addTo(map);
-        };
+            marker.bindPopup("西部公民館");
+        
+            };
         // 取得に失敗した場合の処理
         function errorCallback(error){
             alert("位置情報が取得できませんでした");

@@ -65,10 +65,11 @@ def call3():
 @app.route("/kion")
 def kion():
     import requests
-    API_KEY = "0ea8fd21d3e847189e5b6a088b5f248f"
+    API_KEY = "e0aa1c2e64604d8dbc1e866561cf0241"
     url = f"https://api.weatherbit.io/v2.0/current?lat=39.68809830869338&lon=141.16449176101054&lang=ja&units=M&key={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    print(data)
     print(data["data"][0]["app_temp"])
     kion = data["data"][0]["app_temp"]
     print(data["data"][0]["rh"])
@@ -99,6 +100,9 @@ def おためし():
     Person.create(name=namae , age=namae2 , gender="")
     return redirect ("/jidou_hanbai") 
     
+@app.route("/boukan")
+def boukan():
+    return render_template("boukan.html")
 
 app.run(debug=True, host="0.0.0.0")
 
