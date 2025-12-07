@@ -76,7 +76,7 @@ def kion():
     rh = data["data"][0]["rh"]
     kiken = "危険"
 
-    if kion < 10:
+    if kion < -1:
         kiken = "激さむゥ"
         gazou = "/static/呪いちゃん.png"
     if kion < 28:
@@ -85,7 +85,7 @@ def kion():
     if kion > 28:
         kiken = "注意"
         gazou = "/static/怒りさん.jpg"
-    if kion > 32:
+    if kion > 31:
         kiken = "危険"
         gazou = "/static/汗だくちゃん.jpg"
     return render_template("kion.html", kion=kion, rh=rh, kiken=kiken, gazou=gazou)
