@@ -76,14 +76,14 @@ def kion():
     rh = data["data"][0]["rh"]
     kiken = "危険"
 
-    if kion < -1:
-        kiken = "激さむゥ"
-        gazou = "/static/呪いちゃん.png"
     if kion < 28:
         kiken = "安全"
         gazou = "/static/喜びちゃん.jpg"
+    if kion < -1:
+        kiken = "寒さに気をつけて"
+        gazou = "/static/呪いちゃん.png"
     if kion > 28:
-        kiken = "注意"
+        kiken = "警戒"
         gazou = "/static/怒りさん.jpg"
     if kion > 31:
         kiken = "危険"

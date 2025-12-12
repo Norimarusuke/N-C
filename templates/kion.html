@@ -62,12 +62,46 @@
 </head>
 <body>
  <h2 class="section center">現在</h2>,
- <h1 class="section center"> 気温　{{kion}}℃</h1>  <h1 class="section center"> 湿度　{{rh}}%</h1>  
-<h1 class="section center">{{kiken}}</h1>
+ <h1 class="section center"> 気温 {{kion}}℃</h1>  <h1 class="section center"> 湿度　{{rh}}%</h1> 
 
+<h1 class="section center">{{kiken}}</h1>
 <div class="section center">
     <img src="{{gazou}}" alt="" width="30%" height="30%">
 </div>
+       <table>
+        <thead>
+          <tr>
+              <th>暑さ指数</th>
+              <th>生活活動の目安</th>
+              <th>注意事項</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="red">危険（31℃以上）</td>
+            <td class="red lighten-2">生活活動で起こる危険性</td>
+            <td class="red lighten-2">高齢者は安静状態でも発生する危険性がある。外出はなるべく避けよう</td>
+          </tr>
+          <tr>
+            <td class="orange">厳重警戒(28以上31未満)</td>
+            <td class="orange lighten-2">生活活動で起こる危険性</td>
+            <td class="orange lighten-2">外出時は炎天下を避け、室内では室温の上昇に注意しよう</td>
+          </tr>
+          <tr>
+            <td class="yellow">警戒（25以上28未満）</td>
+            <td class="yellow lighten-2">中程度以上の生活活動で起こる危険性</td>
+            <td class="yellow lighten-2">運動は激しい作業をする際は定期的に十分に休息を取り入れよう</td>
+          </tr>
+
+           <tr>
+            <td class="light-blue">注意（25未満）</td>
+            <td class=" light-blue lighten-2">小程度の生活活動で起こる危険性</td>
+            <td class=" light-blue lighten-2">一般的に危険性は少ないが激しい運動や重労働時には発生する危険性があるよ</td>
+          </tr>
+        </tbody>
+      </table> 
+      熱中症指数(WBTO) 環境省熱中症予防サイトより
 </body>
 
 </html>
