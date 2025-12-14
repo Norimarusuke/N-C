@@ -163,14 +163,20 @@
         }).addTo(map);
         
         var marker = L.marker([39.70192487,141.13275663], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("マリオス");
         var marker = L.marker([39.71584041,141.13844992], { icon: blueIcon }).addTo(map);
-        var marker = L.marker([39.72027727,141.11811989], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("岩手大学");
         var marker = L.marker([39.84234387,141.86261505], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("道の駅 いわいずみ");
         var marker = L.marker([39.33067408,141.50060453], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("道の駅 遠野 風の丘");
         var marker = L.marker([39.697774,141.153892], { icon: blueIcon }).addTo(map);
-        var marker = L.marker([39.7023,141.1474], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("肴町商店街");
         var marker = L.marker([39.7049,141.1453], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("中央通り");
         var marker = L.marker([39.70310233,141.14254961], { icon: blueIcon }).addTo(map);
+        marker.bindPopup("トレンタ 盛岡クロステラス店");
+        
         };
         // 取得に失敗した場合の処理
         function errorCallback(error){
