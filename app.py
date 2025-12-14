@@ -81,10 +81,7 @@ def kion():
         gazou = "/static/喜びちゃん.jpg"
     if kion < -1:
         kiken = "寒さに気をつけて"
-        gazou = "/static/呪いちゃん.png"
-    if kion > 28:
-        kiken = "警戒"
-        gazou = "/static/怒りさん.jpg"
+        gazou = "/static/ネコ　防寒.png"
     if kion > 31:
         kiken = "危険"
         gazou = "/static/汗だくちゃん.jpg"
