@@ -137,7 +137,8 @@
      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+    }) 
+    var marker = L.marker([39.71584041,141.13844992], { icon: redIcon }).addTo(map);
     var marker = L.marker([39.68807354013413, 141.16513012677294], { icon: blueIcon }).addTo(map);
              marker.bindPopup("茶畑ドアーズ");
     var marker = L.marker([39.70157851405784, 141.14691192073383], { icon: blueIcon }).addTo(map);
@@ -156,12 +157,12 @@
              marker.bindPopup("ハンバーグのベル 大通り店");
     var marker = L.marker([39.70230665206176, 141.14668481193846], { icon: blueIcon }).addTo(map);
              marker.bindPopup("海鮮うまいもの酒場 魚すぐ");
-    var marker = L.marker([39.702125053139135, 141.14703886353774], { icon: redIcon }).addTo(map);
+    var marker = L.marker([39.702125053139135, 141.14703886353774], { icon: blueIcon }).addTo(map);
              marker.bindPopup("セブンイレブン盛岡映画館通り店");
     var marker = L.marker([39.70222649812463, 141.14829874364958], { icon: blueIcon }).addTo(map);
              marker.bindPopup("浜焼き海の市");
     var marker = L.marker([39.74332201862154, 141.12530470586717], { icon: blueIcon }).addTo(map);
-             marker.bindPopup("大戸屋ごはん処盛岡みたけ店・函太郎盛岡みたけ店");
+             marker.bindPopup("大戸屋ごはん処盛岡みたけ店・函太郎 盛岡みたけ店");
     var marker = L.marker([39.70268047842948, 141.1446432923743], { icon: blueIcon }).addTo(map);
              marker.bindPopup("パン工房メルヘン大通り店");
     var marker = L.marker([39.68399156512763, 141.12933859979097], { icon0: blueIcon }).addTo(map);
